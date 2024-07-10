@@ -3,23 +3,24 @@ const app = express()
 app.use(express.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
 app.get('/', (request, response) => {
-    response.send(``)
-})
+    response.send(`<form method="post" action="/calc">
+        <input id="num1" type="number" placeholder="Número 1" style="">
+        <input id="num2" type="number" placeholder="Número 2">
+        <br>
+        <input id="num3" type="number" placeholder="Número 3">
 
-app.get('/index', (request, response) => {
-    response.render(`calc`)
+        <input id="calcular" type="submit" value="Calcular">
+
+        <p id="ah">Resultado...</p>
+    </form>`)
 })
 
 app.post('/calc', (request, response) => {
-    var calcular = window.document.querySelector('input#calcular')
+    let resultado = num2.value * num3.value / num1.value
+    ah.innerText = (`${resultado}`)
+    console.log(`${resultado}`)
 
-    calcular.addEventListener('click', () => {
-        let resultado = num2.value * num3.value / num1.value
-        ah.innerText = (`${resultado}`)
-        console.log(`${resultado}`)
-    })
-
-    response.render(`calc`)
+    response.render(`/`)
 })
 const porta = 8080
 app.listen(porta, () => {
