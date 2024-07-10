@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+
+<body>
+    <form action="/">
+        <input id="num1" type="number" placeholder="Número 1">
+        <input id="num2" type="number" placeholder="Número 2">
+        <br>
+        <input id="num3" type="number" placeholder="Número 3">
+        <input id="x" type="number" placeholder="X">
+
+        <input id="calcular" type="button" value="Calcular">
+
+        <p id="ah">Resultado...</p>
+    </form>
+
+    <script>
+        var num1 = window.document.querySelector('input#num1')
+        var num2 = window.document.querySelector('input#num2')
+        var num3 = window.document.querySelector('input#num3')
+        var x = window.document.querySelector('input#x')
+        var ah = window.document.querySelector('p#ah')
+
+        var calcular = window.document.querySelector('input#calcular')
+        calcular.addEventListener('click', () => {
+            let resultado = num2.value * num3.value / num1.value
+            ah.innerText = (`${resultado}`)
+            console.log(`${resultado}`)
+        })
+    </script>
+</body>
+
+</html>
