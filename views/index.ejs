@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculos</title>
+</head>
+<style>
+body{
+    background-color: black;
+    color: white;
+}
+form{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 35%;
+    height: 80%;
+    padding: 1% 3% 1% 3%;
+    background-image: linear-gradient(45deg, rgb(63, 1, 63)20%, rgb(0, 0, 24));
+    border-radius: 20px;
+    box-shadow: 0px 50px 100px -100px white;
+}
+form > input{
+    margin: 1%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+</style>
+
+<body>
+    <form method="post" action="/formulario">
+        <h1>Regra de três</h1>
+        <input name="num1" type="number" placeholder="Número 1" required>
+        <input name="num2" type="number" placeholder="Número 2" required>
+        <br>
+        <input name="num3" type="number" placeholder="Número 3" required>
+        <span>X = <%=x%></span>
+
+        <h1>MRUV</h1>
+        <input name="posInicial" type="number" placeholder="Posição inicial" required>
+        <input name="veloc" type="number" placeholder="Velocidade" required>
+        <input name="interv" type="number" placeholder="Intervalo de tempo" required>
+        <span>Posição final: <%=posFinal%></span>
+        <br>
+        <input id="calcular" type="submit" value="Calcular">
+    </form>
+</body>
+
+</html>
