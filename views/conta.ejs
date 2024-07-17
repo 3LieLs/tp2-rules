@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+
+</head>
+
+<body>
+    <h1>Digite dois números:</h1>
+    <form id="formulario" action="/front" method="post">
+        <label> Número 1: </label>
+        <input id="n1" name="n1" />
+        <label> Número 2: </label>
+        <input id="n2" name="n2" />
+        <button id="soma" type="button">Somar</button>
+        <button id="sub" type="button">Subtrair</button>
+        <button id="mult" type="button">Multiplicar</button>
+        <button id="div" type="button">Dividir</button>
+        <button type="submit">Calcular</button>
+    </form>
+    <h1>Resultado:</h1>
+    <h1><%=resultadoTotal%></h1>
+
+    <script>
+        soma.addEventListener('click', () => {
+            formulario.action = 'resultSoma'
+        })
+        sub.addEventListener('click', () => {
+            formulario.action = 'resultSub'
+        })
+        mult.addEventListener('click', () => {
+            formulario.action = 'resultMult'
+        })
+        div.addEventListener('click', () => {
+            formulario.action = 'resultDiv'
+        })
+    </script>
+</body>
+
+</html>
