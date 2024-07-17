@@ -9,7 +9,7 @@ app.get('/', (request, response) => {
     response.render(`index`, {x, posFinal})
 })
 
-app.post('/front', (request, response) => {
+app.get('/front', (request, response) => {
     resultadoTotal = ''
 
     response.render(`conta`, {resultadoTotal})
