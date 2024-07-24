@@ -17,22 +17,39 @@
         <button id="sub" type="button">Subtrair</button>
         <button id="mult" type="button">Multiplicar</button>
         <button id="div" type="button">Dividir</button>
-        <button type="submit">Calcular</button>
+        <button id="calc" type="submit">Calcular</button>
     </form>
     <h1>Resultado:</h1>
-    <h1><%=resultadoTotal%></h1>
+    <h1 id="res">
+        <%=resultadoTotal%>
+    </h1>
 
     <script>
+        divTrueFalse = true
+
+        calc.addEventListener('click', () => {
+            if (n1.value == '' || n2.value == '' || divTrueFalse == true && n2.value == 0) {
+                alert('Da não, chefe')
+                calc.type = 'button'
+                res.innerHTML = ''
+            } else {
+                calc.type = 'submit'
+            }
+        })
         soma.addEventListener('click', () => {
+            divTrueFalse = false
             formulario.action = 'resultSoma'
         })
         sub.addEventListener('click', () => {
+            divTrueFalse = false
             formulario.action = 'resultSub'
         })
         mult.addEventListener('click', () => {
+            divTrueFalse = false
             formulario.action = 'resultMult'
         })
         div.addEventListener('click', () => {
+            divTrueFalse = true
             formulario.action = 'resultDiv'
         })
     </script>
