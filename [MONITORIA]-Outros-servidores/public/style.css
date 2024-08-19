@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+#formIndex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1% 0% 1% 0%;
+    width: 40%;
+    height: 90%;
+    background-color: rgb(63, 6, 63);
+    border: solid 5px rgb(54, 54, 54);
+    border-radius: 15px;
+}
+
+#formIndex>p {
+    font-size: 30pt;
+    font-weight: bolder;
+}
+
+#formIndex :first-child {
+    width: 50%;
+    height: 7%;
+    margin-bottom: 5%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15pt;
+}
+
+#formIndex>input[type=number] {
+    width: 40%;
+    height: 5%;
+    margin-bottom: 3%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12pt;
+}
+
+#formIndex>input[type=submit] {
+    position: absolute;
+    bottom: 5%;
+    width: 25%;
+    height: 7%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15pt;
+}
+
+
+
+#formLoja {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1% 1% 1% 1%;
+    width: 40%;
+    height: 90%;
+    background-color: rgb(63, 6, 63);
+    border: solid 5px rgb(54, 54, 54);
+    border-radius: 15px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    background-color: gray;
+    border: 3px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+td>input {
+    width: 100%;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="formLoja" action="/lojaComprar" method="get">
+        <table>
+            <tr>
+                <th>Produto:</th>
+                <th>Preço:</th>
+            </tr>
+            <tr>
+                <td>Arroz</td>
+                <td>R$: 19,99</td>
+                <td><input type="submit" value="Comprar" onclick="ID('/ID:Arroz')"></td>
+            </tr>
+            <tr>
+                <td>Leite</td>
+                <td>R$: 15,99</td>
+                <td><input type="submit" name="leite" value="Comprar" onclick="ID('/ID:Leite')"></td>
+            </tr>
+            <tr>
+                <td>Carne</td>
+                <td>R$: 21,00</td>
+                <td><input type="submit" value="Comprar" onclick="ID('/ID:Carne')"></td>
+            </tr>
+            <tr>
+                <td>Frango</td>
+                <td>R$: 11,99</td>
+                <td><input type="submit" value="Comprar" onclick="ID('/ID:Frango')"></td>
+            </tr>
+            <tr>
+                <td>Feijão</td>
+                <td>R$: 9,00</td>
+                <td><input type="submit" value="Comprar" onclick="ID('/ID:Feijao')"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function ID(x) {
+            formLoja.action = x
+        }
+    </script>
+</body>
+
+</html>
