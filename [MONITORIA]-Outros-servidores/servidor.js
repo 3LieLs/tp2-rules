@@ -13,13 +13,6 @@ app.get('/loja', (req, res) => {
 })
 
 app
-    .route("/ID:leite")
-    .get((req, res) => {
-        res.render("comprarLoja");
-        res.redirect("/")
-    })
-
-app
     .route("/teste")
     .get((req, res) => {
         res.redirect("/")

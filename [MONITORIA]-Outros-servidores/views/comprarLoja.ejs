@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monitoria</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%);
+      padding: 1% 0% 1% 0%;
+      width: 40%;
+      height: 90%;
+      background-color: rgb(63, 6, 63);
+      border: solid 5px rgb(54, 54, 54);
+      border-radius: 15px;
+    }
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      margin-top: 30%;
+      color: black;
+      font-size: 40pt;
+    }
+
+    input {
+      margin-top: 10%;
+      width: 20%;
+      height: 5%;
+      padding: 5px;
+      background-color: #1e1e1e;
+      color: white;
+      border: 2px solid #333;
+      border-radius: 5px;
+      font-size: 20pt;
+      box-shadow: 0 0 5px rgba(106, 27, 154, 0.5);
+    }
+  </style>
+  <body>
     <main>
-        <h1 style="color: white;">Compra efetuada</h1>
+      <form id="#formCompra" action="/loja" method="get">
+        <h1>Compra efetuada</h1>
+        <input type="submit" value="Voltar" />
+      </form>
     </main>
-</body>
-
+  </body>
 </html>

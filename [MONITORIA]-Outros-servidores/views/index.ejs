@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monitoria</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <form id="formIndex" action="/teste" method="post">
-        <input type="text" name="nomeUsuario" placeholder="Nome usuário:" required>
-        <p><%=nomeUsuario%></p>
-        <input type="number" name="n1" placeholder="Número(1)">
-        <input type="number" name="n2" placeholder="Número(2)">
-        <p><%=resultado%></p>
-        <input type="submit" value="Enviar">
+      <input
+        type="text"
+        name="nomeUsuario"
+        placeholder="Nome usuário:"
+        required
+      />
+      <p><%=nomeUsuario%></p>
+      <input type="number" name="n1" placeholder="Número(1)" required />
+      <input type="number" name="n2" placeholder="Número(2)" required />
+      <p><%=resultado%></p>
+      <input type="submit" value="Enviar" />
     </form>
-</body>
+
+    <form style="position: absolute; left: 50%; bottom: 20%;" action="/loja" method="get">
+      <input type="submit" value="Loja" />
+    </form>
+  </body>
 </html>
